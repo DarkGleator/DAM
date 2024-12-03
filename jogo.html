@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobo Feroz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Lobo Feroz</h1>
+        <button id="new-game">Novo Jogo</button>
+        <button id="controls">Controlos</button>
+        <div id="controlsPopup" style="display: none;">
+            <h3>Escolha o método de controlo:</h3>
+            <input type="radio" id="mouseControl" name="controlMethod" value="mouse" checked>
+            <label for="mouseControl">Usar o rato</label><br>
+            <input type="radio" id="keyboardControl" name="controlMethod" value="keyboard">
+            <label for="keyboardControl">Usar as teclas</label><br><br>
+            <button id="confirmControl">Confirmar</button>
+        </div>
+    </div>
+    <canvas id="gameCanvas" width="800" height="950" style="display: none;"> </canvas>
+    <video id="creditsVideo" style="display: none;">
+        <source src="sprites/video.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <button id="pauseButton">Pausar Jogo</button>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <p>O jogo está pausado.</p>
+            <div id="pauseVolumeControls">
+                <label for="sound-volume">Volume Efeitos Sonoros:</label>
+                <input type="range" id="sound-volume" min="0" max="100" value="50">
+                <br>
+                <label for="music-volume">Volume Música Ambiente:</label>
+                <input type="range" id="music-volume" min="0" max="100" value="50">
+            </div>
+            <button id="continueBtn">Continuar Jogo</button>
+            <button id="menuBtn">Voltar ao menu inicial</button>
+        </div>
+    </div>
+    <button id="helpButton">Ajuda</button>
+    <div id="helpPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeHelpPopup()">&times;</span>
+            <h2>Como Jogar:</h2>
+            <p>Em primeiro o jogador deve escolher o método para controlar o personagem, tendo duas escolhas, utilização do teclado ou mouse.</p>
+            <p>Essa escolha deverá ser feito atráves do menu controlos no página incial do jogo.</p>
+            <p>Ao escolher o método de controlo do personagem, o jogador pode começar um novo jogo, apartir do botão "Novo Jogo".</p>
+            <h2>Objetivos do jogo:</h2>
+            <p>O jogador deve controlar o lobo, para que este não seja acertado pelos ataques dos animais do lado contrário.</p>
+            <p>Cada fase têm uma duração de 3 minutos</p>
+            <p>O jogador pode apanhar moedas para aumentar a sua pontuação em 500 por moeda, que é visivel no canto superior direito.</p>
+            <p>O lobo têm 3 vidas, se este perder todas as suas vidas o jogo termina e uma mensagem para recomeçar o jogo aparecerá.</p>
+            <p>O jogador consegu apanhar escudos que protegem o lobo do próximo ataque. Use o escudos com cuidado porque são raros.</p>
+            <p>Os animais vão atacando mais rapido e movendo-se mais rápido conforme o tempo passa em cada fase, alêm disso, as fases vão dificultando.</p>
+        </div>
+    </div>
+    <script src="gamefunctions.js"></script>
+</body>
+</html>

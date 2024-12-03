@@ -1,0 +1,169 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    height: 100vh; 
+    overflow: hidden; 
+    
+
+    background: 
+        linear-gradient(
+            rgba(236, 185, 42, 0.8), 
+            rgba(236, 185, 42, 0.8)
+        ),
+        url('sprites/fundo2.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+canvas {
+    background-color: #eee;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #333;
+
+}
+
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#menu h1 {
+    margin-bottom: 30px;
+}
+
+#menu button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#volume-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#volume-controls label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+#pauseButton {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #cde01c;
+    border-radius: 4%;
+    width: 30%;
+    text-align: center;
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10%;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+.modal-content button:hover {
+    background-color: #ddd;
+}
+
+
+.modal.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+#helpButton {
+    position: absolute;
+    top: 20px;
+    left: 570px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    background-color: #d88221;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#helpButton:hover {
+    background-color: #a07b45;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
